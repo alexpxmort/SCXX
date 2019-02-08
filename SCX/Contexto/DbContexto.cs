@@ -3,13 +3,14 @@ using SCX.Models;
 
 namespace SCX.Contexto
 {
-    public class CategoriaContexto:DbContext
+    public class DbContexto:DbContext
     {
-        public CategoriaContexto(DbContextOptions<CategoriaContexto>options):base(options){
+        public DbContexto(DbContextOptions<DbContexto>options):base(options){
             Database.EnsureCreated();
         }
 
         public DbSet<Categoria> Categorias{get;set;}
+           public DbSet<SubCategoria> SubCategorias{get;set;}
         
     }
 }

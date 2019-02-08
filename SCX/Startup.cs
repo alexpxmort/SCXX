@@ -23,8 +23,7 @@ namespace SCX
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<CategoriaContexto>(options =>options.UseMySql(Configuration.GetConnectionString("defaultConnection")));
-             services.AddDbContext<SubCategoriaContexto>(options =>options.UseMySql(Configuration.GetConnectionString("defaultConnection")));
+            services.AddDbContext<DbContexto>(options =>options.UseMySql(Configuration.GetConnectionString("defaultConnection")));
             services.AddMvc();
         }
 

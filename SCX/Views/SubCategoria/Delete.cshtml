@@ -1,12 +1,12 @@
-@model SCX.Models.Categoria;
+@model SCX.Models.SubCategoria;
 <button type="button" class="btn btn-info" id="btnVoltar"><a asp-action="Index" asp-controller="Home">Retornar ao Menu</a></button><br><br>
-    <div class="alert alert-danger" id="msg">Deseja Realmente Excluir esta Categoria ?</div>
+    <div class="alert alert-danger" id="msg">Deseja Realmente Excluir esta SubCategoria ?</div>
 
     <br>
 
-<form asp-action="Delete" asp-controller="Categoria">
+<form asp-action="Delete" asp-controller="SubCategoria">
    <dl class="dl-horizontal">
-        <dt>Categoria</dt>
+        <dt>SubCategoria</dt>
         <dd >@Html.DisplayFor(Model =>Model.Nome)</dd>
   </dl> <br>
 <button type="submit" class="btn btn-warning" id="delBtn">Excluir</button>

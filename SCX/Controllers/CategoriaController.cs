@@ -1,5 +1,6 @@
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using SCX.Contexto;
 using SCX.Models;
 
@@ -7,9 +8,9 @@ namespace SCX.Controllers
 {
     public class CategoriaController : Controller
     {
-        private readonly CategoriaContexto CatContexto;
+        private readonly DbContexto CatContexto;
 
-        public CategoriaController(CategoriaContexto _contexto)
+        public CategoriaController(DbContexto _contexto)
         {
             CatContexto = _contexto;
         }
@@ -31,6 +32,7 @@ namespace SCX.Controllers
 
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Categoria(Categoria categoria)
         {
 
@@ -43,80 +45,72 @@ namespace SCX.Controllers
 
             return View(categoria);
         }
-
         [HttpGet]
         public IActionResult Edit(long? id)
         {
-            var categoria = CatContexto.Categorias.Find(id);
-
-            if (categoria != null)
+            if (id == null)
             {
-
-                return View(categoria);
+                return NotFound();
             }
+            Categoria categoria = CatContexto.Categorias.Find(id);
 
+            if (categoria == null)
+            {
+                return NotFound();
+            }
             return View(categoria);
         }
 
+
         [HttpPost]
-        public IActionResult Edit(Categoria categoria)
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(long? id, Categoria categoria)
         {
-
-
+            var _categoria = CatContexto.Categorias.Find(id);
+            _categoria.Nome = categoria.Nome;
 
             if (ModelState.IsValid)
             {
-                CatContexto.Categorias.Update(categoria);
+                CatContexto.Categorias.Update(_categoria);
                 CatContexto.SaveChanges();
-
                 return RedirectToAction("ListCategorias");
-
             }
-
             return View(categoria);
         }
 
-
-           [HttpPost]
-        public IActionResult Delete(Categoria _categoria)
-        {
-            var categoria = CatContexto.Categorias.Find(_categoria.IdCategoria);
-
-            if (categoria!=null)
-            {
-                CatContexto.Categorias.Remove(categoria);
-                CatContexto.SaveChanges();
-
-                return RedirectToAction("ListCategorias");
-
-            }
-
-            return View();
-        }
-
-        
         [HttpGet]
         public IActionResult Delete(long? id)
         {
-            var categoria = CatContexto.Categorias.Find(id);
 
-            if (categoria != null)
+            Categoria categoria = CatContexto.Categorias.Find(id);
+
+            if (categoria == null)
             {
-
-                return View(categoria);
+                return NotFound();
             }
 
             return View(categoria);
         }
 
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(long? id)
+        {
+
+            Categoria categoria = CatContexto.Categorias.Find(id);
+
+            if (categoria != null)
+            {
+                CatContexto.Categorias.Remove(categoria);
+                CatContexto.SaveChanges();
+                return RedirectToAction("ListCategorias");
+            }
 
 
+            return View(categoria);
 
 
-
-
-
-
+        }
 
     }
 }

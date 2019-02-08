@@ -1,12 +1,12 @@
-@model SCX.Models.Categoria;
+@model SCX.Models.SubCategoria;
 <button type="button" class="btn btn-info" id="btnVoltar"><a asp-action="Index" asp-controller="Home">Retornar ao Menu</a></button>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <h1 class="jumbotron jumbotron-fluid">
-    EDIÇÃO de CATEGORIAS <i class="far fa-edit"></i>
+    EDIÇÃO de SUBCATEGORIAS <i class="far fa-edit"></i>
 
 </h1><br>
 <hr>
-<form asp-action="Edit" asp-controller="Categoria">
+<form asp-action="Edit" asp-controller="SubCategoria">
     <label for="nome">Nome</label><br>
     <input type="text" name="nome" id="nome" class="form form-control" value="@Html.DisplayFor(model =>Model.Nome)"/><br>
     <button type="submit" class="btn btn-success" >Salvar</button>

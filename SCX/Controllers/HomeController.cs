@@ -18,10 +18,6 @@ namespace SCX.Controllers
             return View();
         }
 
-        public IActionResult SubCategoria(){
-            return View();
-        }
-
 
         public IActionResult Error()
         {

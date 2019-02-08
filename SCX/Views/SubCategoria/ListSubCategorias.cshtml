@@ -1,0 +1,36 @@
+@model IEnumerable<SCX.Models.SubCategoria>;
+<button type="button" class="btn btn-info" id="btnVoltar"><a asp-action="Index" asp-controller="Home">Retornar ao Menu</a></button>
+@{
+    ViewData["Title"] = "Listagem Categorias";
+}
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+<h1 class="jumbotron jumbotron-fluid">
+    LISTAGEM de  SUBCATEGORIAS <i class="fas fa-clipboard-check"></i>
+</h1><br>
+<hr>
+<table class="table table-bordered">
+    <tr>
+        <td>
+            @Html.DisplayNameFor(Model => Model.Nome)
+        </td>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(Model => item.Nome)
+            </td>
+              <td> 
+                <button type="button" class="btn btn-default"><i class="far fa-edit">@Html.ActionLink("Editar","Edit",new {id=item.IdSubCategoria})</i></button>
+            </td>
+            <td> 
+                <button type="button" class="btn btn-default"><i class="fa fa-trash">@Html.ActionLink("Deletar","Delete",new {id=item.IdSubCategoria})</i></button>
+            </td>
+        </tr>
+    }
+
+    
+</table>
