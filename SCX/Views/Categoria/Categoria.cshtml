@@ -1,0 +1,13 @@
+
+<button type="button" class="btn btn-info" id="btnVoltar"><a asp-action="Index" asp-controller="Home">Retornar ao Menu</a></button>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<h1 class="jumbotron jumbotron-fluid">
+    CADASTRO de CATEGORIAS <i class="fas fa-plus-circle"></i>
+
+</h1><br>
+<hr>
+<form asp-action="Categoria">
+    <label for="nome">Nome</label><br>
+    <input type="text" name="nome" id="nome" class="form form-control"/><br>
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>

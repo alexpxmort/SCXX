@@ -1,0 +1,15 @@
+@model SCX.Models.Categoria;
+
+    <div class="alert alert-danger" id="msg">Deseja Realmente Excluir esta Categoria ?</div>
+
+    <br>
+
+<form asp-action="Delete">
+   <dl class="dl-horizontal">
+        <dt>Categoria</dt>
+        <dd >@Html.DisplayFor(Model =>Model.IdCategoria)</dd>
+        <dd >@Html.DisplayFor(Model =>Model.Nome)</dd>
+  </dl> <br>
+<button type="submit" class="btn btn-warning" id="delBtn">Excluir</button>
+</form>
+ 

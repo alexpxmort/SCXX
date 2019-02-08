@@ -1,0 +1,11 @@
+C:\Users\axew\Desktop\SCX\bin\Debug\netcoreapp2.0\SCX.deps.json
+C:\Users\axew\Desktop\SCX\bin\Debug\netcoreapp2.0\SCX.runtimeconfig.json
+C:\Users\axew\Desktop\SCX\bin\Debug\netcoreapp2.0\SCX.runtimeconfig.dev.json
+C:\Users\axew\Desktop\SCX\bin\Debug\netcoreapp2.0\SCX.dll
+C:\Users\axew\Desktop\SCX\bin\Debug\netcoreapp2.0\SCX.pdb
+C:\Users\axew\Desktop\SCX\obj\Debug\netcoreapp2.0\SCX.csprojAssemblyReference.cache
+C:\Users\axew\Desktop\SCX\obj\Debug\netcoreapp2.0\SCX.csproj.CoreCompileInputs.cache
+C:\Users\axew\Desktop\SCX\obj\Debug\netcoreapp2.0\SCX.AssemblyInfoInputs.cache
+C:\Users\axew\Desktop\SCX\obj\Debug\netcoreapp2.0\SCX.AssemblyInfo.cs
+C:\Users\axew\Desktop\SCX\obj\Debug\netcoreapp2.0\SCX.dll
+C:\Users\axew\Desktop\SCX\obj\Debug\netcoreapp2.0\SCX.pdb

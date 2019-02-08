@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <div class="wrapper">
+     <aside class="main_sidebar">
+            <ul>
+                <li><i class="fas fa-boxes"></i><a href="#">Produtos</a></li>
+                <li><i class="fas fa-clipboard-check"></i><a href="#">Listagem</a></li>
+                <li><i class="fas fa-clone"></i><a asp-controller="Categoria" asp-action="Categoria">Categorias</a></li>
+                <li><i class="fas fa-copy"></i><a  asp-controller="Home" asp-action="SubCategoria">SubCategorias</a></li>         
+            </ul>
+        </aside> 
+    </div>

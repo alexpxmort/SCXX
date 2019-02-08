@@ -1,0 +1,163 @@
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+.body-content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.carousel-caption p {
+  font-size: 20px;
+  line-height: 1.4;
+}
+.carousel-inner .item img[src$=".svg"] {
+  width: 100%;
+}
+#qrCode {
+  margin: 15px;
+}
+@media screen and (max-width: 767px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+
+.main_sidebar {
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 210px;
+  transition: all 300ms cubic-bezier(0.65, 0.05, 0.36, 1);
+  will-change: left, width;
+  box-shadow: inset -1px 0 10px rgba(0, 0, 0, 0.4);
+  background: #293749;
+}
+
+.main_sidebar:after {
+  content: "";
+  background-color: #253238;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  height: 100%;
+  width: 58px;
+}
+
+.main_sidebar ul {
+  list-style: none;
+  padding-left: 58px;
+}
+
+.main_sidebar ul li {
+  padding: 10px;
+}
+
+.main_sidebar ul li a {
+  color: #fff;
+  display: block;
+}
+
+.main_sidebar ul li i {
+  float: left;
+  color: grey;
+  margin-left: -58px;
+  font-size: 24px;
+  padding-left: 7px;
+}
+
+.main_sidebar ul li:hover {
+  background: #167696;
+}
+
+.main_sidebar ul li a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main_sidebar ul li:hover i {
+  color: #fff;
+  text-decoration: none;
+}
+
+.main_sidebar ul li.active {
+  background: #0f4698;
+}
+
+.main_sidebar ul li.active i {
+  color: #fff;
+}
+
+.main_sidebar ul li.active:hover {
+  background: #167696;
+  text-decoration: none;
+}
+
+.main_sidebar ul li.active:hover i {
+  color: #fff;
+}
+
+ul li {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14pt;
+}
+
+a {
+  text-decoration: none;
+  font-size: 15pt;
+}
+
+#btnVoltar a {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16pt;
+  color: #000000;
+}
+
+#btnVoltar {
+  border-radius: 70px 10px;
+  height: 40px;
+  width: 215px;
+}
+
+#btnVoltar a:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#msg {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22pt;
+  height: 80px;
+  text-align: center;
+  padding: 10px;
+}
+
+.dl-horizontal {
+  height: 160px;
+  background-color: #d3d3d3;
+  width: 270px;
+}
+.dl-horizontal dt {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  font-weight: bolder;
+  color: "#000000";
+}
+
+.dl-horizontal dd {
+ 
+  font-size: 15pt;
+}
+
+#delBtn {
+  height: 60px;
+  width: 140px;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15pt;
+  border-radius: 10px 5px;
+}
+
+#delBtn:hover {
+  color: #ffffff;
+}
